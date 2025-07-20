@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developer Portfolio</title>
+    <meta name="description"
+        content="Game Developer Portfolio - Showcasing innovative games and interactive experiences">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-gamepad"></i>
+                <span>GameDev</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="text-gradient">Game Developer</span>
+
+            </h1>
+            <p class="hero-subtitle">Creating immersive worlds and unforgettable gaming experiences</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-elements">
+                <div class="floating-element" data-speed="2">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="floating-element" data-speed="3">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="floating-element" data-speed="1">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Passionate about creating engaging interactive experiences</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate game developer with expertise in creating immersive gaming experiences. My
+                        journey in game development spans multiple platforms and technologies, from indie mobile games
+                        to complex PC experiences.</p>
+                    <p>I specialize in gameplay programming, game design, and interactive storytelling. I believe that
+                        great games come from the perfect balance of engaging mechanics, compelling narratives, and
+                        polished execution.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">44+</span>
+                            <span class="stat-label">Games Shipped</span>
+                            <span class="stat-detail">Truck Driver (PS5 - A/Low AA) • Guns and Spurs 2 (Indie A) •
+                                Orange Season (Indie A) • Battle Legion (Indie/Low AA Mobile) • 40+ HTML Games</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                            <span class="stat-detail">Game Development & Programming</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Specializations</span>
+                            <span class="stat-detail">SDK Integration • Performance Optimization • Cross-Platform
+                                Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>A showcase of my recent game development work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-hat-cowboy"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Guns-and-Spurs-2-2470538.html"
+                                    class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
+                                        class="fas fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Guns and Spurs 2</h3>
+                            <p>Wild West bounty hunter adventure where you track down outlaws in a vast open world,
+                                capture them with your lasso, and face off in classic showdowns.</p>
+                            <div class="project-tech">
+                                <span>Nintendo Switch</span>
+                                <span>Controller Support</span>
+                                <span>Action</span>
+                            </div>
+                        </div>
+                        <div class="project-back" style="display: none;">
+                            <h3>My Work on This Project</h3>
+                            <p>Key contributions to this Action Adventure title:</p>
+                            <ul>
+                                <li>Helped integrate Nintendo SDK and optimized build specifically for Nintendo Switch
+                                    platform</li>
+                                <li>Implemented occlusion culling techniques to improve rendering performance by hiding
+                                    non-visible objects</li>
+                                <li>Systematically identified and resolved numerous glitches and bugs in the codebase
+                                </li>
+                                <li>Introduced comprehensive controller support for gamepad and controller gameplay</li>
+                                <li>Enhanced accessibility and gameplay options for players</li>
+                                <li>Optimized frame rates and resource utilization throughout the game</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://store.steampowered.com/app/416000/Orange_Season/" class="project-link"
+                                    target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
+                                        class="fas fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Orange Season</h3>
+                            <p>Charming farming simulation where you build your dream farm in Orange Town. Grow crops,
+                                raise animals, fish, and mine while building relationships with villagers through quests
+                                and festivals.</p>
+                            <div class="project-tech">
+                                <span>Steam</span>
+                                <span>Steam Deck</span>
+                                <span>PS5</span>
+                            </div>
+                        </div>
+                        <div class="project-back" style="display: none;">
+                            <h3>My Work on This Project</h3>
+                            <p><strong>Contributions:</strong></p>
+                            <ul>
+                                <li>Enhanced the gaming experience by implementing controller support and integrating
+                                    multiple Steam APIs, creating a seamless environment for controller-based gameplay
+                                </li>
+                                <li>Implemented Save and Load System for PS5 platform compatibility</li>
+                                <li>Developed Steam Deck builds that support and optimize performance for the platform
+                                </li>
+                                <li>Integrated Steam SDK for achievements, cloud saves, and community features</li>
+                                <li>Successfully navigated Steam integration challenges and learned the intricacies of
+                                    Steam's SDK implementation</li>
+                                <li>Gained expertise in Steam Deck development, understanding how the platform runs
+                                    applications on Linux architecture</li>
+                                <li>Developed cross-platform compatibility skills working across Steam, Steam Deck, and
+                                    PS5 ecosystems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/8qKOxfgM5nA" class="project-link" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
+                                        class="fas fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Custom Game Engine</h3>
+                            <p>Low-level game engine built from scratch featuring custom physics, ImGui integration, and
+                                FMOD audio support with real-time debugging capabilities.</p>
+                            <div class="project-tech">
+                                <span>C++</span>
+                                <span>ImGui</span>
+                                <span>FMOD</span>
+                            </div>
+                        </div>
+                        <div class="project-back" style="display: none;">
+                            <h3>My Work on This Project</h3>
+                            <p><strong>UI Development:</strong></p>
+                            <ul>
+                                <li>Integrated ImGui into a custom low-level game engine for real-time debugging and
+                                    editor tooling</li>
+                                <li>Modified the rendering pipeline to support ImGui overlays without interfering with
+                                    core engine visuals</li>
+                                <li>Drew multiple UI panels (stats, object properties, system toggles) dynamically on
+                                    screen</li>
+                                <li>Created a runtime debug menu using ImGui to toggle features, visualize engine data,
+                                    and control gameplay variables</li>
+                                <li>Linked ImGui panels to display live network data such as client/server states and
+                                    player information in multiplayer setup</li>
+                                <li>Used ImGui for real-time physics and AI system debugging, including collision states
+                                    and AI behavior trees</li>
+                            </ul>
+                            <p><strong>Audio & Physics:</strong></p>
+                            <ul>
+                                <li>Helped set up the FMOD audio plugin in custom engine to support dynamic sound
+                                    playback</li>
+                                <li>Integrated audio control into ImGui interface, adding volume sliders for runtime
+                                    adjustment</li>
+                                <li>Developed custom physics engine with collision detection for spheres, AABBs, and
+                                    custom meshes</li>
+                                <li>Implemented collision resolution with accurate response forces and positional
+                                    correction</li>
+                                <li>Mastered retained-mode UI architecture and modular engine design principles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cat"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/Nsvy7P2DvP4" class="project-link" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
+                                        class="fas fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Kitten Rescue Multiplayer</h3>
+                            <p>Multiplayer action game featuring AI-driven enemies, advanced collision systems, and
+                                networked gameplay where players collect and rescue kittens while avoiding intelligent
+                                patrol enemies.</p>
+                            <div class="project-tech">
+                                <span>Multiplayer</span>
+                                <span>AI Systems</span>
+                                <span>Networking</span>
+                            </div>
+                        </div>
+                        <div class="project-back" style="display: none;">
+                            <h3>My Work on This Project</h3>
+                            <p><strong>Collision Detection & Resolution:</strong></p>
+                            <ul>
+                                <li>Implemented multiple collision detection types: Axis-Aligned Bounding Box (AABB),
+                                    Sphere collisions, Oriented Bounding Box (OBB), and Plane collisions</li>
+                                <li>Developed robust collision resolution systems for accurate object interactions</li>
+                            </ul>
+                            <p><strong>AI & State Machines:</strong></p>
+                            <ul>
+                                <li>Created enemy AI that patrols the environment with intelligent pathfinding</li>
+                                <li>Implemented AI chase behavior when player enters detection range</li>
+                                <li>Built reliable state machines for AI behaviors including patrolling, chasing, and
+                                    idle actions</li>
+                                <li>Fine-tuned AI behaviors to balance challenge and fairness in gameplay</li>
+                            </ul>
+                            <p><strong>Gameplay & Networking:</strong></p>
+                            <ul>
+                                <li>Developed collect and rescue kitten mechanics with scoring system</li>
+                                <li>Implemented follower AI for rescued kittens to follow the player</li>
+                                <li>Created real-time multiplayer networking with synchronized player actions,
+                                    positions, and scores</li>
+                                <li>Built robust server architecture managing connections, high scores, and game states
+                                    across multiple clients</li>
+                                <li>Handled network latency and packet loss for smooth multiplayer experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/i1z_AbCLvwk" class="project-link" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
+                                        class="fas fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Landscape Renderer</h3>
+                            <p>Advanced 3D landscape rendering system featuring heightmap-based terrain generation,
+                                environmental mapping with cube maps, and dynamic weather effects including realistic
+                                grass and snow simulation.</p>
+                            <div class="project-tech">
+                                <span>OpenGL</span>
+                                <span>Shaders</span>
+                                <span>Scene Graph</span>
+                            </div>
+                        </div>
+                        <div class="project-back" style="display: none;">
+                            <h3>My Work on This Project</h3>
+                            <p><strong>Landscape Rendering with Heightmaps:</strong></p>
+                            <ul>
+                                <li>Created large terrain using heightmap data and applied textures through fragment
+                                    shaders</li>
+                                <li>Incorporated procedural meshes to represent rocks, trees, and other scene elements
+                                </li>
+                                <li>Optimized terrain rendering for performance across vast environments</li>
+                            </ul>
+                            <p><strong>Environment Mapping & Structure:</strong></p>
+                            <ul>
+                                <li>Used cube maps to create realistic reflections on water and metallic objects</li>
+                                <li>Implemented scene graph structure to optimize rendering and manage complex
+                                    hierarchical objects</li>
+                                <li>Developed automatic camera movement with free camera mode switching capabilities
+                                </li>
+                            </ul>
+                            <p><strong>Environmental Effects:</strong></p>
+                            <ul>
+                                <li>Enhanced environment with realistic grass rendering for visual fidelity and natural
+                                    aesthetics</li>
+                                <li>Simulated dynamic snow effects to create immersive weather conditions</li>
+                                <li>Integrated skeletal animation techniques for dynamic content like waving grass and
+                                    evolving meshes</li>
+                                <li>Mastered efficient large-scale terrain rendering with scene graph optimization</li>
+                                <li>Developed complex camera control systems for seamless scene navigation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chess-rook"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/7sx0mlmATNc" class="project-link" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
+                                        class="fas fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Castle Hero</h3>
+                            <p>Unity-based tower defense game combining strategic tower placement with unique hero units
+                                featuring skill trees. Defend your stronghold against escalating enemy waves using
+                                data-driven design and NavMesh AI.</p>
+                            <div class="project-tech">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>NavMesh AI</span>
+                            </div>
+                        </div>
+                        <div class="project-back" style="display: none;">
+                            <h3>My Work on This Project</h3>
+                            <p><strong>Core Systems Development:</strong></p>
+                            <ul>
+                                <li>Developed comprehensive tower defense game in Unity as final year dissertation
+                                    project (Jan–May 2023)</li>
+                                <li>Created specialized tower types with distinct roles: projectile, AoE, and slowing
+                                    effects</li>
+                                <li>Built hero system with unique abilities and skill tree progression mechanics</li>
+                                <li>Implemented wave spawner system that escalates challenge and difficulty over time
+                                </li>
+                            </ul>
+                            <p><strong>Technical Architecture:</strong></p>
+                            <ul>
+                                <li>Utilized NavMesh-based AI pathfinding for intelligent enemy movement and navigation
+                                </li>
+                                <li>Implemented data-driven design using ScriptableObjects for character stats, tower
+                                    configurations, and upgrade data</li>
+                                <li>Optimized performance through object pooling and efficient scene management
+                                    techniques</li>
+                                <li>Created clean, responsive UI system for tracking health, currency, tower options,
+                                    and wave information</li>
+                            </ul>
+                            <p><strong>Design & Balancing:</strong></p>
+                            <ul>
+                                <li>Developed modular, designer-friendly system enabling rapid iteration on game balance
+                                </li>
+                                <li>Implemented scalable difficulty system with data-driven balancing for extensibility
+                                </li>
+                                <li>Designed tactical gameplay combining fast-paced action with strategic
+                                    decision-making</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/FoD8Zv2KaP8" class="project-link" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
+                                        class="fas fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Advanced AI System</h3>
+                            <p>Sophisticated AI-driven game featuring Behavior Trees, dynamic inventory systems, and
+                                advanced animation techniques including motion wrapping for realistic parkour and
+                                character movement.</p>
+                            <div class="project-tech">
+                                <span>Behavior Trees</span>
+                                <span>Animation</span>
+                                <span>AI Systems</span>
+                            </div>
+                        </div>
+                        <div class="project-back" style="display: none;">
+                            <h3>My Work on This Project</h3>
+                            <p><strong>AI Behavior Systems:</strong></p>
+                            <ul>
+                                <li>Implemented sophisticated AI using Behavior Trees, Blackboard, and service
+                                    conditions for complex character behaviors</li>
+                                <li>Created dynamic AI behaviors encompassing attacking, pursuing, and adaptive
+                                    strategies that evolve over time</li>
+                                <li>Developed challenging and engaging gameplay experience through intelligent AI that
+                                    adapts as the game progresses</li>
+                                <li>Explored advanced AI concepts focused on creating agents with evolving personality
+                                    traits</li>
+                            </ul>
+                            <p><strong>Dynamic Systems:</strong></p>
+                            <ul>
+                                <li>Built dynamic inventory system that intelligently positions objects within the game
+                                    world based on available slots</li>
+                                <li>Implemented seamless item placement system for character hands and designated
+                                    inventory locations</li>
+                                <li>Created responsive equipment system that automatically adapts to player acquisition
+                                    and usage patterns</li>
+                            </ul>
+                            <p><strong>Advanced Animation:</strong></p>
+                            <ul>
+                                <li>Incorporated motion wrapping techniques for dynamic and fluid parkour movements</li>
+                                <li>Developed realistic vaulting systems that allow natural navigation through game
+                                    environments</li>
+                                <li>Enhanced character movement with heightened realism for more immersive player
+                                    experience</li>
+                                <li>Mastered advanced animation pipelines for complex character locomotion systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://www.playstation.com/en-gb/games/truck-driver/" class="project-link"
+                                    target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
+                                        class="fas fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Truck Driver</h3>
+                            <p>Trucking simulation where you inherit your father's truck and build a career in a
+                                seamless open world. Navigate diverse landscapes, build community relationships, and
+                                customize your truck while working various jobs.</p>
+                            <div class="project-tech">
+                                <span>PlayStation</span>
+                                <span>Simulation</span>
+                                <span>Open World</span>
+                            </div>
+                        </div>
+                        <div class="project-back" style="display: none;">
+                            <h3>My Work on This Project</h3>
+                            <p><strong>Post-Launch Support & Quality Assurance:</strong></p>
+                            <ul>
+                                <li>Diligently worked on resolving post-DLC release issues reported by the gaming
+                                    community</li>
+                                <li>Ensured players can enjoy a smoother and more stable gameplay experience</li>
+                                <li>Demonstrated commitment to addressing player feedback and concerns for high-quality
+                                    gaming experience</li>
+                                <li>Developed expertise in community-driven development and post-launch support
+                                    workflows</li>
+                            </ul>
+                            <p><strong>Navigation & World Systems:</strong></p>
+                            <ul>
+                                <li>Enhanced the in-game satellite navigation system for improved player experience</li>
+                                <li>Offered players a more intuitive tool for navigating the game's expansive open world
+                                </li>
+                                <li>Streamlined route planning to make deliveries more efficient and user-friendly</li>
+                                <li>Contributed to a more immersive and enjoyable trucking simulation experience</li>
+                            </ul>
+                            <p><strong>Gameplay Systems Improvement:</strong></p>
+                            <ul>
+                                <li>Focused on improving the job system to create more engaging gameplay mechanics</li>
+                                <li>Developed a more dynamic and rewarding progression system for players</li>
+                                <li>Enhanced player motivation and engagement through improved reward structures</li>
+                                <li>Gained deep understanding of simulation game mechanics and player progression
+                                    systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.traplight.battleslides"
+                                    class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
+                                        class="fas fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Battle Legion</h3>
+                            <p>Strategic tactical game where players command units in dynamic sliding combat scenarios.
+                                Features innovative mechanics combining tactical movement with real-time strategy
+                                elements.</p>
+                            <div class="project-tech">
+                                <span>Google Play</span>
+                                <span>Mobile</span>
+                                <span>Strategy</span>
+                            </div>
+                        </div>
+                        <div class="project-back" style="display: none;">
+                            <h3>My Work on This Project</h3>
+                            <p><strong>Analytics & Data Integration:</strong></p>
+                            <ul>
+                                <li>Actively integrated game analytics systems to gather valuable data on player
+                                    behavior and game performance</li>
+                                <li>Implemented comprehensive tracking systems to monitor player engagement, retention,
+                                    and gameplay patterns</li>
+                                <li>Developed data-driven insights to improve game balance and player experience
+                                    optimization</li>
+                            </ul>
+                            <p><strong>Monetization & Ad Solutions:</strong></p>
+                            <ul>
+                                <li>Integrated ad solutions into the game, enabling a balanced and sustainable approach
+                                    to monetization</li>
+                                <li>Ensured seamless and non-disruptive user experience for players while implementing
+                                    revenue streams</li>
+                                <li>Optimized ad placement and timing to maximize revenue without compromising gameplay
+                                    quality</li>
+                            </ul>
+                            <p><strong>Gameplay Design & Implementation:</strong></p>
+                            <ul>
+                                <li>Designed and implemented new boss units composed of multiple units working in tandem
+                                </li>
+                                <li>Created complex enemy encounters that add depth and challenge to gameplay</li>
+                                <li>Developed strategic gameplay opportunities offering players exciting and varied
+                                    combat scenarios</li>
+                            </ul>
+                            <p><strong>Technical Challenges & Growth:</strong></p>
+                            <ul>
+                                <li>Mastered SDK integration processes, developing expertise in seamless third-party
+                                    service implementation</li>
+                                <li>Overcame challenges in maintaining environment synchronization with integrated SDKs
+                                </li>
+                                <li>Developed patience and systematic problem-solving approaches for complex technical
+                                    integration issues</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fab fa-unity"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/KLQyDmGTiEI" class="project-link" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
+                                        class="fas fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Unity WebGL Multiplayer Framework</h3>
+                            <p>Production-ready plug-and-play multiplayer framework for Unity WebGL games with mobile
+                                controller support and studio-grade deployment capabilities.</p>
+                            <div class="project-tech">
+                                <span>Unity</span>
+                                <span>WebGL</span>
+                                <span>Node.js</span>
+                                <span>WebSockets</span>
+                                <span>JavaScript SDK</span>
+                            </div>
+                        </div>
+                        <div class="project-back" style="display: none;">
+                            <h3>Key Achievements</h3>
+                            <ul>
+                                <li><strong>SDK Integration:</strong> Robust Unity WebGL to JavaScript SDK bridge for
+                                    analytics, monetization, and remote management</li>
+                                <li><strong>Plug-and-Play Deployment:</strong> Zero code changes required for partner
+                                    platform integration</li>
+                                <li><strong>Cross-Device Multiplayer:</strong> Scalable Node.js/WebSocket architecture
+                                    for real-time multiplayer</li>
+                                <li><strong>Mobile Controller System:</strong> QR code/room code instant joining with
+                                    responsive browser-based controllers</li>
+                                <li><strong>Production Focus:</strong> Maintainable, scalable solution ready for real
+                                    studio adoption</li>
+                                <li><strong>Results:</strong> Low-latency gameplay with robust pairing, reconnection,
+                                    and monetization integration</li>
+                            </ul>
+                            <button class="btn btn-secondary flip-btn" onclick="flipCard(this)">Back to
+                                Overview</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Let's collaborate on your next gaming project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind
+                        or just want to chat about game development, feel free to reach out!</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:labham7@gmail.com">labham7@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://linkedin.com/in/labhambaheti"
+                                target="_blank">linkedin.com/in/labhambaheti</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/lzeio" target="_blank">github.com/lzeio</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-twitter"></i>
+                            <a href="https://x.com/baheti_labham" target="_blank">@baheti_labham</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-gamepad"></i>
+                    <span>GameDev Portfolio</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/lzeio" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/labhambaheti" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/baheti_labham" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Game Developer Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
