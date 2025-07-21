@@ -143,47 +143,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Contact form handling
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Get form data
-        const formData = new FormData(this);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
-
-        // Simple validation
-        if (!name || !email || !subject || !message) {
-            alert('Please fill in all fields');
-            return;
-        }
-
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address');
-            return;
-        }
-
-        // Simulate form submission
-        const submitButton = this.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        submitButton.textContent = 'Sending...';
-        submitButton.disabled = true;
-
-        setTimeout(() => {
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            this.reset();
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
-        }, 1000);
-    });
-}
-
 // Typing effect for hero title
 function typeWriter(element, text, speed = 100) {
     let i = 0;
@@ -469,3 +428,87 @@ const rainbowStyles = `
     </style>
 `;
 document.head.insertAdjacentHTML('beforeend', rainbowStyles);
+
+// Flying Unicorn with Sparkle Trail
+function createSparkleTrail() {
+    const unicorn = document.getElementById('unicorn');
+    if (!unicorn) return;
+
+    // Bright white and pink colors only
+    const brightColors = [
+        '#ffffff',  // Pure white
+        '#ffccdd',  // Light pink
+        '#ff99cc',  // Bright pink
+        '#ffddee',  // Very light pink
+        '#ff66bb',  // Hot pink
+        '#ffe6f0',  // Pale pink
+        '#ff80cc',  // Medium pink
+        '#fff0f5',  // Lavender blush white
+        '#ff4da6',  // Vibrant pink
+        '#ffb3d9',  // Soft pink
+        '#ffeef7',  // Almost white pink
+        '#ff1a8c'   // Electric pink
+    ];
+
+    const sparkle = document.createElement('div');
+    sparkle.className = 'trail-square';
+    sparkle.style.position = 'fixed';
+    sparkle.style.width = '12px';
+    sparkle.style.height = '12px';
+
+    const color = brightColors[Math.floor(Math.random() * brightColors.length)];
+
+    sparkle.style.background = color;
+    sparkle.style.borderRadius = '2px'; // Slightly rounded squares
+    sparkle.style.pointerEvents = 'none';
+    sparkle.style.zIndex = '9998';
+    sparkle.style.animation = 'sparkle-fade 2s ease-out forwards';
+    sparkle.style.boxShadow = `0 0 25px ${color}, 0 0 50px ${color}, 0 0 75px ${color}`;
+    sparkle.style.color = color;
+
+    // Position sparkle at unicorn's current position with more spread
+    const unicornRect = unicorn.getBoundingClientRect();
+    sparkle.style.left = (unicornRect.left + unicornRect.width / 2 - 60 + Math.random() * 120 - 60) + 'px';
+    sparkle.style.top = (unicornRect.top + unicornRect.height / 2 + Math.random() * 40 - 20) + 'px';
+
+    document.body.appendChild(sparkle);
+
+    // Remove sparkle after animation
+    setTimeout(() => {
+        if (sparkle.parentNode) {
+            sparkle.parentNode.removeChild(sparkle);
+        }
+    }, 2000);
+}
+
+// Start sparkle trail when unicorn starts flying
+setInterval(createSparkleTrail, 100);
+
+// Make unicorn disappear when clicked
+document.addEventListener('DOMContentLoaded', function () {
+    const unicorn = document.getElementById('unicorn');
+    if (unicorn) {
+        unicorn.addEventListener('click', function () {
+            unicorn.style.opacity = '0';
+            unicorn.style.transition = 'opacity 0.5s ease-out';
+            setTimeout(() => {
+                unicorn.style.display = 'none';
+            }, 500);
+        });
+
+        // Make unicorn clickable
+        unicorn.style.cursor = 'pointer';
+        unicorn.style.pointerEvents = 'all';
+    }
+});
+
+// Add some magical sound effect on click (optional easter egg)
+document.addEventListener('click', function (e) {
+    const unicorn = document.getElementById('unicorn');
+    if (unicorn && Math.random() < 0.15) { // 15% chance
+        // Create extra magical rainbow sparkle burst on click
+        for (let i = 0; i < 8; i++) {
+            setTimeout(() => createSparkleTrail(), i * 30);
+        }
+    }
+});
