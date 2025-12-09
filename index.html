@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Developer Portfolio</title>
+    <title>Labham Baheti | Game Developer</title>
     <meta name="description"
-        content="Game Developer Portfolio - Showcasing innovative games and interactive experiences">
+        content="Labham Baheti - Game Developer Portfolio showcasing innovative games and interactive experiences">
     <link rel="stylesheet" href="styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"
@@ -20,18 +20,13 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <i class="fas fa-gamepad"></i>
-                <span>GameDev</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#html-games">Mini Games</a></li>
             </ul>
             <div class="nav-controls">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                </button>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -44,690 +39,938 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="text-gradient">Game Developer</span>
-
-            </h1>
-            <p class="hero-subtitle">Creating immersive worlds and unforgettable gaming experiences</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <h1 class="hero-title">Game Developer</h1>
+            <p class="hero-subtitle">Building engaging gaming experiences through code and creativity</p>
+            <div class="hero-about">
+                <p>I'm Labham—a game developer who loves building experiences that feel tight, readable, and fun. I've
+                    shipped across mobile, console, and PC, from small indie builds to A/AA releases.</p>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">44+</span>
+                    <span class="hero-stat-label">Games Shipped</span>
+                    <span class="hero-stat-detail">Truck Driver (PS5), Guns and Spurs 2 (Switch), Orange Season
+                        (PC/Console), Battle Legion (Mobile), plus 40+ HTML5 games.</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">3+</span>
+                    <span class="hero-stat-label">Years Experience</span>
+                    <span class="hero-stat-detail">Gameplay, networking, optimization</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">6+</span>
+                    <span class="hero-stat-label">Specializations</span>
+                    <span class="hero-stat-detail">SDKs, perf, cross-platform, liveops, tooling, deployment</span>
+                </div>
             </div>
         </div>
-        <div class="hero-visual">
-            <div class="floating-elements">
-                <div class="floating-element" data-speed="2">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="floating-element" data-speed="3">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <div class="floating-element" data-speed="1">
-                    <i class="fas fa-puzzle-piece"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Flying Unicorn -->
-    <div class="flying-unicorn" id="unicorn">
-        🦄
-    </div>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <p>Passionate about creating engaging interactive experiences</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate game developer with expertise in creating immersive gaming experiences. My
-                        journey in game development spans multiple platforms and technologies, from indie mobile games
-                        to complex PC experiences.</p>
-                    <p>I specialize in gameplay programming, game design, and interactive storytelling. I believe that
-                        great games come from the perfect balance of engaging mechanics, compelling narratives, and
-                        polished execution.</p>
-                    <div class="stats">
-                        <div class="stat">
-                            <span class="stat-number">44+</span>
-                            <span class="stat-label">Games Shipped</span>
-                            <span class="stat-detail">Truck Driver (PS5 - A/Low AA) • Guns and Spurs 2 (Indie A) •
-                                Orange Season (Indie A) • Battle Legion (Indie/Low AA Mobile) • 40+ HTML Games</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Experience</span>
-                            <span class="stat-detail">Game Development & Programming</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">6+</span>
-                            <span class="stat-label">Specializations</span>
-                            <span class="stat-detail">SDK Integration • Performance Optimization • Cross-Platform
-                                Development</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>A showcase of my recent game development work</p>
+            <h2>Featured Projects</h2>
+
+            <div class="work-item">
+                <div class="work-header">
+                    <h3>Landscape Renderer</h3>
+                    <span class="work-platform">OpenGL, C++</span>
+                </div>
+                <div class="work-content">
+                    <div class="work-text">
+                        <p class="work-description">Advanced 3D landscape rendering system featuring heightmap-based
+                            terrain generation, environmental mapping with cube maps, and dynamic weather effects.</p>
+                        <div class="work-contributions">
+                            <h4>Key Contributions:</h4>
+                            <ul>
+                                <li>Heightmap-based terrain generation</li>
+                                <li>Cube map environment mapping</li>
+                                <li>Dynamic grass and snow effects</li>
+                                <li>Scene graph optimization and skeletal animation</li>
+                            </ul>
+                        </div>
+                        <a href="https://github.com/lzeio/CSC8502" target="_blank" class="work-link">View on GitHub
+                            →</a>
+                    </div>
+                    <div class="work-video">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/i1z_AbCLvwk"
+                            title="Landscape Renderer" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-hat-cowboy"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Guns-and-Spurs-2-2470538.html"
-                                    class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
-                                        class="fas fa-info-circle"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-front">
-                            <h3>Guns and Spurs 2</h3>
-                            <p>Wild West bounty hunter adventure where you track down outlaws in a vast open world,
-                                capture them with your lasso, and face off in classic showdowns.</p>
-                            <div class="project-tech">
-                                <span>Nintendo Switch</span>
-                                <span>Controller Support</span>
-                                <span>Action</span>
-                            </div>
-                        </div>
-                        <div class="project-back" style="display: none;">
-                            <h3>My Work on This Project</h3>
-                            <p>Key contributions to this Action Adventure title:</p>
-                            <ul>
-                                <li>Helped integrate Nintendo SDK and optimized build specifically for Nintendo Switch
-                                    platform</li>
-                                <li>Implemented occlusion culling techniques to improve rendering performance by hiding
-                                    non-visible objects</li>
-                                <li>Systematically identified and resolved numerous glitches and bugs in the codebase
-                                </li>
-                                <li>Introduced comprehensive controller support for gamepad and controller gameplay</li>
-                                <li>Enhanced accessibility and gameplay options for players</li>
-                                <li>Optimized frame rates and resource utilization throughout the game</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-seedling"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://store.steampowered.com/app/416000/Orange_Season/" class="project-link"
-                                    target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
-                                        class="fas fa-info-circle"></i></button>
-                            </div>
-                        </div>
+            <div class="work-item">
+                <div class="work-header">
+                    <h3>Unity WebGL Multiplayer Framework</h3>
+                    <span class="work-platform">Unity, Node.js, WebSockets</span>
+                </div>
+                <div class="work-content">
+                    <div class="work-video">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/KLQyDmGTiEI"
+                            title="Unity WebGL Multiplayer Framework" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
-                    <div class="project-content">
-                        <div class="project-front">
-                            <h3>Orange Season</h3>
-                            <p>Charming farming simulation where you build your dream farm in Orange Town. Grow crops,
-                                raise animals, fish, and mine while building relationships with villagers through quests
-                                and festivals.</p>
-                            <div class="project-tech">
-                                <span>Steam</span>
-                                <span>Steam Deck</span>
-                                <span>PS5</span>
-                            </div>
-                        </div>
-                        <div class="project-back" style="display: none;">
-                            <h3>My Work on This Project</h3>
-                            <p><strong>Contributions:</strong></p>
+                    <div class="work-text">
+                        <p class="work-description">Production-ready plug-and-play multiplayer framework for Unity WebGL
+                            games with mobile controller support and studio-grade deployment capabilities.</p>
+                        <div class="work-contributions">
+                            <h4>Key Contributions:</h4>
                             <ul>
-                                <li>Enhanced the gaming experience by implementing controller support and integrating
-                                    multiple Steam APIs, creating a seamless environment for controller-based gameplay
-                                </li>
-                                <li>Implemented Save and Load System for PS5 platform compatibility</li>
-                                <li>Developed Steam Deck builds that support and optimize performance for the platform
-                                </li>
-                                <li>Integrated Steam SDK for achievements, cloud saves, and community features</li>
-                                <li>Successfully navigated Steam integration challenges and learned the intricacies of
-                                    Steam's SDK implementation</li>
-                                <li>Gained expertise in Steam Deck development, understanding how the platform runs
-                                    applications on Linux architecture</li>
-                                <li>Developed cross-platform compatibility skills working across Steam, Steam Deck, and
-                                    PS5 ecosystems</li>
+                                <li>SDK integration (analytics, monetization, remote management)</li>
+                                <li>Cross-device multiplayer with WebSockets</li>
+                                <li>Mobile controller system with QR code pairing</li>
+                                <li>Production-ready architecture for studio deployment</li>
                             </ul>
                         </div>
+                        <a href="https://github.com/lzeio/Cross-Device-Multiplayer-Gamezop" target="_blank"
+                            class="work-link">View on GitHub →</a>
                     </div>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://youtu.be/8qKOxfgM5nA" class="project-link" target="_blank"><i
-                                        class="fab fa-youtube"></i></a>
-                                <a href="https://github.com/SL-A-SH/CSC8508" class="project-link" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
-                                        class="fas fa-info-circle"></i></button>
-                            </div>
-                        </div>
+            <div class="work-item">
+                <div class="work-header">
+                    <h3>Castle Hero</h3>
+                    <span class="work-platform">Unity, C#</span>
+                </div>
+                <div class="work-content">
+                    <div class="work-video">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/7sx0mlmATNc"
+                            title="Castle Hero" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
-                    <div class="project-content">
-                        <div class="project-front">
-                            <h3>Custom Game Engine</h3>
-                            <p>Low-level game engine built from scratch featuring custom physics, ImGui integration, and
-                                FMOD audio support with real-time debugging capabilities.</p>
-                            <div class="project-tech">
-                                <span>C++</span>
-                                <span>ImGui</span>
-                                <span>FMOD</span>
-                            </div>
-                        </div>
-                        <div class="project-back" style="display: none;">
-                            <h3>My Work on This Project</h3>
-                            <p><strong>UI Development:</strong></p>
+                    <div class="work-text">
+                        <p class="work-description">Tower defense game combining strategic tower placement with unique
+                            hero units featuring skill trees. Defend your stronghold against escalating enemy waves
+                            using data-driven design and NavMesh AI.</p>
+                        <div class="work-contributions">
+                            <h4>Key Contributions:</h4>
                             <ul>
-                                <li>Integrated ImGui into a custom low-level game engine for real-time debugging and
-                                    editor tooling</li>
-                                <li>Modified the rendering pipeline to support ImGui overlays without interfering with
-                                    core engine visuals</li>
-                                <li>Drew multiple UI panels (stats, object properties, system toggles) dynamically on
-                                    screen</li>
-                                <li>Created a runtime debug menu using ImGui to toggle features, visualize engine data,
-                                    and control gameplay variables</li>
-                                <li>Linked ImGui panels to display live network data such as client/server states and
-                                    player information in multiplayer setup</li>
-                                <li>Used ImGui for real-time physics and AI system debugging, including collision states
-                                    and AI behavior trees</li>
-                            </ul>
-                            <p><strong>Audio & Physics:</strong></p>
-                            <ul>
-                                <li>Helped set up the FMOD audio plugin in custom engine to support dynamic sound
-                                    playback</li>
-                                <li>Integrated audio control into ImGui interface, adding volume sliders for runtime
-                                    adjustment</li>
-                                <li>Developed custom physics engine with collision detection for spheres, AABBs, and
-                                    custom meshes</li>
-                                <li>Implemented collision resolution with accurate response forces and positional
-                                    correction</li>
-                                <li>Mastered retained-mode UI architecture and modular engine design principles</li>
+                                <li>Complete game development (Dissertation Project 2023)</li>
+                                <li>Tower and hero systems with skill progression</li>
+                                <li>Wave spawner with difficulty scaling</li>
+                                <li>Data-driven design using ScriptableObjects</li>
                             </ul>
                         </div>
+                        <a href="https://github.com/lzeio/Castle-Hero" target="_blank" class="work-link">View on GitHub
+                            →</a>
                     </div>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-cat"></i>
+            <div class="work-item">
+                <div class="work-header">
+                    <h3>Advanced AI System</h3>
+                    <span class="work-platform">Unreal, Behavior Trees</span>
+                </div>
+                <div class="work-content">
+                    <div class="work-text">
+                        <p class="work-description">Sophisticated AI-driven game featuring Behavior Trees, dynamic
+                            inventory systems, and advanced animation techniques including motion wrapping for realistic
+                            parkour.</p>
+                        <div class="work-contributions">
+                            <h4>Key Contributions:</h4>
+                            <ul>
+                                <li>Behavior Tree implementation for AI decision-making</li>
+                                <li>Dynamic inventory system</li>
+                                <li>Motion wrapping for parkour and movement</li>
+                                <li>Advanced animation pipeline development</li>
+                            </ul>
                         </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://youtu.be/Nsvy7P2DvP4" class="project-link" target="_blank"><i
-                                        class="fab fa-youtube"></i></a>
-                                <a href="https://github.com/lzeio/CSC8503" class="project-link" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
-                                        class="fas fa-info-circle"></i></button>
-                            </div>
-                        </div>
+                        <a href="https://github.com/lzeio/RPG" target="_blank" class="work-link">View on GitHub →</a>
                     </div>
-                    <div class="project-content">
-                        <div class="project-front">
-                            <h3>Kitten Rescue Multiplayer</h3>
-                            <p>Multiplayer action game featuring AI-driven enemies, advanced collision systems, and
-                                networked gameplay where players collect and rescue kittens while avoiding intelligent
-                                patrol enemies.</p>
-                            <div class="project-tech">
-                                <span>Multiplayer</span>
-                                <span>AI Systems</span>
-                                <span>Networking</span>
-                            </div>
-                        </div>
-                        <div class="project-back" style="display: none;">
-                            <h3>My Work on This Project</h3>
-                            <p><strong>Collision Detection & Resolution:</strong></p>
-                            <ul>
-                                <li>Implemented multiple collision detection types: Axis-Aligned Bounding Box (AABB),
-                                    Sphere collisions, Oriented Bounding Box (OBB), and Plane collisions</li>
-                                <li>Developed robust collision resolution systems for accurate object interactions</li>
-                            </ul>
-                            <p><strong>AI & State Machines:</strong></p>
-                            <ul>
-                                <li>Created enemy AI that patrols the environment with intelligent pathfinding</li>
-                                <li>Implemented AI chase behavior when player enters detection range</li>
-                                <li>Built reliable state machines for AI behaviors including patrolling, chasing, and
-                                    idle actions</li>
-                                <li>Fine-tuned AI behaviors to balance challenge and fairness in gameplay</li>
-                            </ul>
-                            <p><strong>Gameplay & Networking:</strong></p>
-                            <ul>
-                                <li>Developed collect and rescue kitten mechanics with scoring system</li>
-                                <li>Implemented follower AI for rescued kittens to follow the player</li>
-                                <li>Created real-time multiplayer networking with synchronized player actions,
-                                    positions, and scores</li>
-                                <li>Built robust server architecture managing connections, high scores, and game states
-                                    across multiple clients</li>
-                                <li>Handled network latency and packet loss for smooth multiplayer experience</li>
-                            </ul>
-                        </div>
+                    <div class="work-video">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/FoD8Zv2KaP8"
+                            title="Advanced AI System" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-mountain"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://youtu.be/i1z_AbCLvwk" class="project-link" target="_blank"><i
-                                        class="fab fa-youtube"></i></a>
-                                <a href="https://github.com/lzeio/CSC8502" class="project-link" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
-                                        class="fas fa-info-circle"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-front">
-                            <h3>Landscape Renderer</h3>
-                            <p>Advanced 3D landscape rendering system featuring heightmap-based terrain generation,
-                                environmental mapping with cube maps, and dynamic weather effects including realistic
-                                grass and snow simulation.</p>
-                            <div class="project-tech">
-                                <span>OpenGL</span>
-                                <span>Shaders</span>
-                                <span>Scene Graph</span>
-                            </div>
-                        </div>
-                        <div class="project-back" style="display: none;">
-                            <h3>My Work on This Project</h3>
-                            <p><strong>Landscape Rendering with Heightmaps:</strong></p>
-                            <ul>
-                                <li>Created large terrain using heightmap data and applied textures through fragment
-                                    shaders</li>
-                                <li>Incorporated procedural meshes to represent rocks, trees, and other scene elements
-                                </li>
-                                <li>Optimized terrain rendering for performance across vast environments</li>
-                            </ul>
-                            <p><strong>Environment Mapping & Structure:</strong></p>
-                            <ul>
-                                <li>Used cube maps to create realistic reflections on water and metallic objects</li>
-                                <li>Implemented scene graph structure to optimize rendering and manage complex
-                                    hierarchical objects</li>
-                                <li>Developed automatic camera movement with free camera mode switching capabilities
-                                </li>
-                            </ul>
-                            <p><strong>Environmental Effects:</strong></p>
-                            <ul>
-                                <li>Enhanced environment with realistic grass rendering for visual fidelity and natural
-                                    aesthetics</li>
-                                <li>Simulated dynamic snow effects to create immersive weather conditions</li>
-                                <li>Integrated skeletal animation techniques for dynamic content like waving grass and
-                                    evolving meshes</li>
-                                <li>Mastered efficient large-scale terrain rendering with scene graph optimization</li>
-                                <li>Developed complex camera control systems for seamless scene navigation</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <h2 style="margin-top: 80px;">Commercial Releases</h2>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-chess-rook"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://youtu.be/7sx0mlmATNc" class="project-link" target="_blank"><i
-                                        class="fab fa-youtube"></i></a>
-                                <a href="https://github.com/lzeio/Castle-Hero" class="project-link" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
-                                        class="fas fa-info-circle"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-front">
-                            <h3>Castle Hero</h3>
-                            <p>Unity-based tower defense game combining strategic tower placement with unique hero units
-                                featuring skill trees. Defend your stronghold against escalating enemy waves using
-                                data-driven design and NavMesh AI.</p>
-                            <div class="project-tech">
-                                <span>Unity</span>
-                                <span>C#</span>
-                                <span>NavMesh AI</span>
-                            </div>
-                        </div>
-                        <div class="project-back" style="display: none;">
-                            <h3>My Work on This Project</h3>
-                            <p><strong>Core Systems Development:</strong></p>
-                            <ul>
-                                <li>Developed comprehensive tower defense game in Unity as final year dissertation
-                                    project (Jan–May 2023)</li>
-                                <li>Created specialized tower types with distinct roles: projectile, AoE, and slowing
-                                    effects</li>
-                                <li>Built hero system with unique abilities and skill tree progression mechanics</li>
-                                <li>Implemented wave spawner system that escalates challenge and difficulty over time
-                                </li>
-                            </ul>
-                            <p><strong>Technical Architecture:</strong></p>
-                            <ul>
-                                <li>Utilized NavMesh-based AI pathfinding for intelligent enemy movement and navigation
-                                </li>
-                                <li>Implemented data-driven design using ScriptableObjects for character stats, tower
-                                    configurations, and upgrade data</li>
-                                <li>Optimized performance through object pooling and efficient scene management
-                                    techniques</li>
-                                <li>Created clean, responsive UI system for tracking health, currency, tower options,
-                                    and wave information</li>
-                            </ul>
-                            <p><strong>Design & Balancing:</strong></p>
-                            <ul>
-                                <li>Developed modular, designer-friendly system enabling rapid iteration on game balance
-                                </li>
-                                <li>Implemented scalable difficulty system with data-driven balancing for extensibility
-                                </li>
-                                <li>Designed tactical gameplay combining fast-paced action with strategic
-                                    decision-making</li>
-                            </ul>
-                        </div>
-                    </div>
+            <!-- NON-VIDEO PROJECTS LATER -->
+            <div class="work-item">
+                <div class="work-header">
+                    <h3>Truck Driver</h3>
+                    <span class="work-platform">PlayStation 5</span>
                 </div>
+                <p class="work-description">Trucking simulation where you inherit your father's truck and build a career
+                    in a seamless open world. Navigate diverse landscapes, build community relationships, and customize
+                    your truck while working various jobs.</p>
+                <div class="work-contributions">
+                    <h4>Key Contributions:</h4>
+                    <ul>
+                        <li>Post-launch support and community-driven bug fixes</li>
+                        <li>Enhanced satellite navigation system</li>
+                        <li>Improved job system and progression mechanics</li>
+                        <li>Quality assurance and gameplay optimization</li>
+                    </ul>
+                </div>
+                <a href="https://www.playstation.com/en-gb/games/truck-driver/" target="_blank" class="work-link">View
+                    on PlayStation Store →</a>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://youtu.be/FoD8Zv2KaP8" class="project-link" target="_blank"><i
-                                        class="fab fa-youtube"></i></a>
-                                <a href="https://github.com/lzeio/RPG" class="project-link" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
-                                        class="fas fa-info-circle"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-front">
-                            <h3>Advanced AI System</h3>
-                            <p>Sophisticated AI-driven game featuring Behavior Trees, dynamic inventory systems, and
-                                advanced animation techniques including motion wrapping for realistic parkour and
-                                character movement.</p>
-                            <div class="project-tech">
-                                <span>Behavior Trees</span>
-                                <span>Animation</span>
-                                <span>AI Systems</span>
-                            </div>
-                        </div>
-                        <div class="project-back" style="display: none;">
-                            <h3>My Work on This Project</h3>
-                            <p><strong>AI Behavior Systems:</strong></p>
-                            <ul>
-                                <li>Implemented sophisticated AI using Behavior Trees, Blackboard, and service
-                                    conditions for complex character behaviors</li>
-                                <li>Created dynamic AI behaviors encompassing attacking, pursuing, and adaptive
-                                    strategies that evolve over time</li>
-                                <li>Developed challenging and engaging gameplay experience through intelligent AI that
-                                    adapts as the game progresses</li>
-                                <li>Explored advanced AI concepts focused on creating agents with evolving personality
-                                    traits</li>
-                            </ul>
-                            <p><strong>Dynamic Systems:</strong></p>
-                            <ul>
-                                <li>Built dynamic inventory system that intelligently positions objects within the game
-                                    world based on available slots</li>
-                                <li>Implemented seamless item placement system for character hands and designated
-                                    inventory locations</li>
-                                <li>Created responsive equipment system that automatically adapts to player acquisition
-                                    and usage patterns</li>
-                            </ul>
-                            <p><strong>Advanced Animation:</strong></p>
-                            <ul>
-                                <li>Incorporated motion wrapping techniques for dynamic and fluid parkour movements</li>
-                                <li>Developed realistic vaulting systems that allow natural navigation through game
-                                    environments</li>
-                                <li>Enhanced character movement with heightened realism for more immersive player
-                                    experience</li>
-                                <li>Mastered advanced animation pipelines for complex character locomotion systems</li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="work-item">
+                <div class="work-header">
+                    <h3>Guns and Spurs 2</h3>
+                    <span class="work-platform">Nintendo Switch</span>
                 </div>
+                <p class="work-description">Wild West bounty hunter adventure where you track down outlaws in a vast
+                    open world, capture them with your lasso, and face off in classic showdowns.</p>
+                <div class="work-contributions">
+                    <h4>Key Contributions:</h4>
+                    <ul>
+                        <li>Nintendo Switch SDK integration and optimization</li>
+                        <li>Occlusion culling for performance optimization</li>
+                        <li>Controller support implementation</li>
+                        <li>Bug fixes and gameplay refinement</li>
+                    </ul>
+                </div>
+                <a href="https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Guns-and-Spurs-2-2470538.html"
+                    target="_blank" class="work-link">View on Nintendo eShop →</a>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.playstation.com/en-gb/games/truck-driver/" class="project-link"
-                                    target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
-                                        class="fas fa-info-circle"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-front">
-                            <h3>Truck Driver</h3>
-                            <p>Trucking simulation where you inherit your father's truck and build a career in a
-                                seamless open world. Navigate diverse landscapes, build community relationships, and
-                                customize your truck while working various jobs.</p>
-                            <div class="project-tech">
-                                <span>PlayStation</span>
-                                <span>Simulation</span>
-                                <span>Open World</span>
-                            </div>
-                        </div>
-                        <div class="project-back" style="display: none;">
-                            <h3>My Work on This Project</h3>
-                            <p><strong>Post-Launch Support & Quality Assurance:</strong></p>
-                            <ul>
-                                <li>Diligently worked on resolving post-DLC release issues reported by the gaming
-                                    community</li>
-                                <li>Ensured players can enjoy a smoother and more stable gameplay experience</li>
-                                <li>Demonstrated commitment to addressing player feedback and concerns for high-quality
-                                    gaming experience</li>
-                                <li>Developed expertise in community-driven development and post-launch support
-                                    workflows</li>
-                            </ul>
-                            <p><strong>Navigation & World Systems:</strong></p>
-                            <ul>
-                                <li>Enhanced the in-game satellite navigation system for improved player experience</li>
-                                <li>Offered players a more intuitive tool for navigating the game's expansive open world
-                                </li>
-                                <li>Streamlined route planning to make deliveries more efficient and user-friendly</li>
-                                <li>Contributed to a more immersive and enjoyable trucking simulation experience</li>
-                            </ul>
-                            <p><strong>Gameplay Systems Improvement:</strong></p>
-                            <ul>
-                                <li>Focused on improving the job system to create more engaging gameplay mechanics</li>
-                                <li>Developed a more dynamic and rewarding progression system for players</li>
-                                <li>Enhanced player motivation and engagement through improved reward structures</li>
-                                <li>Gained deep understanding of simulation game mechanics and player progression
-                                    systems</li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="work-item">
+                <div class="work-header">
+                    <h3>Orange Season</h3>
+                    <span class="work-platform">Steam, Steam Deck, PS5</span>
                 </div>
+                <p class="work-description">Charming farming simulation where you build your dream farm in Orange Town.
+                    Grow crops, raise animals, fish, and mine while building relationships with villagers through quests
+                    and festivals.</p>
+                <div class="work-contributions">
+                    <h4>Key Contributions:</h4>
+                    <ul>
+                        <li>Cross-platform compatibility (Steam, Steam Deck, PS5)</li>
+                        <li>Steam SDK integration for achievements and cloud saves</li>
+                        <li>Save/Load system implementation</li>
+                        <li>Controller support and platform optimization</li>
+                    </ul>
+                </div>
+                <a href="https://store.steampowered.com/app/416000/Orange_Season/" target="_blank"
+                    class="work-link">View on Steam →</a>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://play.google.com/store/apps/details?id=com.traplight.battleslides"
-                                    class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
-                                        class="fas fa-info-circle"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-front">
-                            <h3>Battle Legion</h3>
-                            <p>Strategic tactical game where players command units in dynamic sliding combat scenarios.
-                                Features innovative mechanics combining tactical movement with real-time strategy
-                                elements.</p>
-                            <div class="project-tech">
-                                <span>Google Play</span>
-                                <span>Mobile</span>
-                                <span>Strategy</span>
-                            </div>
-                        </div>
-                        <div class="project-back" style="display: none;">
-                            <h3>My Work on This Project</h3>
-                            <p><strong>Analytics & Data Integration:</strong></p>
-                            <ul>
-                                <li>Actively integrated game analytics systems to gather valuable data on player
-                                    behavior and game performance</li>
-                                <li>Implemented comprehensive tracking systems to monitor player engagement, retention,
-                                    and gameplay patterns</li>
-                                <li>Developed data-driven insights to improve game balance and player experience
-                                    optimization</li>
-                            </ul>
-                            <p><strong>Monetization & Ad Solutions:</strong></p>
-                            <ul>
-                                <li>Integrated ad solutions into the game, enabling a balanced and sustainable approach
-                                    to monetization</li>
-                                <li>Ensured seamless and non-disruptive user experience for players while implementing
-                                    revenue streams</li>
-                                <li>Optimized ad placement and timing to maximize revenue without compromising gameplay
-                                    quality</li>
-                            </ul>
-                            <p><strong>Gameplay Design & Implementation:</strong></p>
-                            <ul>
-                                <li>Designed and implemented new boss units composed of multiple units working in tandem
-                                </li>
-                                <li>Created complex enemy encounters that add depth and challenge to gameplay</li>
-                                <li>Developed strategic gameplay opportunities offering players exciting and varied
-                                    combat scenarios</li>
-                            </ul>
-                            <p><strong>Technical Challenges & Growth:</strong></p>
-                            <ul>
-                                <li>Mastered SDK integration processes, developing expertise in seamless third-party
-                                    service implementation</li>
-                                <li>Overcame challenges in maintaining environment synchronization with integrated SDKs
-                                </li>
-                                <li>Developed patience and systematic problem-solving approaches for complex technical
-                                    integration issues</li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="work-item">
+                <div class="work-header">
+                    <h3>Battle Legion</h3>
+                    <span class="work-platform">Mobile (Google Play)</span>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fab fa-unity"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://youtu.be/KLQyDmGTiEI" class="project-link" target="_blank"><i
-                                        class="fab fa-youtube"></i></a>
-                                <a href="https://github.com/lzeio/Cross-Device-Multiplayer-Gamezop" class="project-link"
-                                    target="_blank"><i class="fab fa-github"></i></a>
-                                <button class="project-link flip-btn" onclick="flipCard(this)"><i
-                                        class="fas fa-info-circle"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-front">
-                            <h3>Unity WebGL Multiplayer Framework</h3>
-                            <p>Production-ready plug-and-play multiplayer framework for Unity WebGL games with mobile
-                                controller support and studio-grade deployment capabilities.</p>
-                            <div class="project-tech">
-                                <span>Unity</span>
-                                <span>WebGL</span>
-                                <span>Node.js</span>
-                                <span>WebSockets</span>
-                                <span>JavaScript SDK</span>
-                            </div>
-                        </div>
-                        <div class="project-back" style="display: none;">
-                            <h3>Key Achievements</h3>
-                            <ul>
-                                <li><strong>SDK Integration:</strong> Robust Unity WebGL to JavaScript SDK bridge for
-                                    analytics, monetization, and remote management</li>
-                                <li><strong>Plug-and-Play Deployment:</strong> Zero code changes required for partner
-                                    platform integration</li>
-                                <li><strong>Cross-Device Multiplayer:</strong> Scalable Node.js/WebSocket architecture
-                                    for real-time multiplayer</li>
-                                <li><strong>Mobile Controller System:</strong> QR code/room code instant joining with
-                                    responsive browser-based controllers</li>
-                                <li><strong>Production Focus:</strong> Maintainable, scalable solution ready for real
-                                    studio adoption</li>
-                                <li><strong>Results:</strong> Low-latency gameplay with robust pairing, reconnection,
-                                    and monetization integration</li>
-                            </ul>
-                            <button class="btn btn-secondary flip-btn" onclick="flipCard(this)">Back to
-                                Overview</button>
-                        </div>
-                    </div>
+                <p class="work-description">Strategic tactical game where players command units in dynamic sliding
+                    combat scenarios. Features innovative mechanics combining tactical movement with real-time strategy
+                    elements.</p>
+                <div class="work-contributions">
+                    <h4>Key Contributions:</h4>
+                    <ul>
+                        <li>Analytics integration and data tracking</li>
+                        <li>Ad integration and monetization systems</li>
+                        <li>Boss unit design and implementation</li>
+                        <li>SDK integration and complex gameplay systems</li>
+                    </ul>
                 </div>
+                <a href="https://play.google.com/store/apps/details?id=com.traplight.battleslides" target="_blank"
+                    class="work-link">View on Google Play →</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Mini Games Section -->
+    <section id="html-games" class="html-games">
         <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Let's collaborate on your next gaming project</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind
-                        or just want to chat about game development, feel free to reach out!</p>
-                    <div class="contact-items">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:labham7@gmail.com">labham7@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://linkedin.com/in/labhambaheti"
-                                target="_blank">linkedin.com/in/labhambaheti</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com/lzeio" target="_blank">github.com/lzeio</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-twitter"></i>
-                            <a href="https://x.com/baheti_labham" target="_blank">@baheti_labham</a>
-                        </div>
+            <h2>Mini Games I've Worked On</h2>
+            <p class="section-subtitle">A collection of mini games I've worked on</p>
+
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Mahjong At Home: Hawaiian Edition</h3>
+                        <span class="game-tag">Puzzle</span>
                     </div>
+                    <p class="game-description">Mahjong At Home: Aloha Edition — classic mahjong solitaire with a
+                        tropical/Aloha theme.</p>
+                    <div class="game-tech">
+                        <span>Puzzle & Logic</span>
+                        <span>Relaxing</span>
+                        <span>Board Game</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/mahjong-at-home-hawaiian-edition/pGF1Q7l1s"
+                        class="game-link" target="_blank">Play Game →</a>
                 </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>From Nerd to School Popular</h3>
+                        <span class="game-tag">Adventure</span>
+                    </div>
+                    <p class="game-description">Transform from a shy nerd into a popular student! Choose your outfits
+                        and make friends in this fun life simulation.</p>
+                    <div class="game-tech">
+                        <span>Adventure</span>
+                        <span>Fashion</span>
+                        <span>Life Sim</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/from-nerd-to-school-popular/XuSI73Wi5" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Ellie Summer Spa Beauty Salon</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Ellie Summer Spa Beauty Salon — a beauty simulation where you help Ellie
+                        prepare for summer with facials, skincare and styling.</p>
+                    <div class="game-tech">
+                        <span>Adventure</span>
+                        <span>Beauty</span>
+                        <span>Strategy</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/ellie-summer-spa-beauty-salon/lzFg1zsV5" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Panda Tropical Wedding Story</h3>
+                        <span class="game-tag">Adventure</span>
+                    </div>
+                    <p class="game-description">Panda Tropical Wedding Story — dress/prepare the panda bride for a
+                        tropical wedding.</p>
+                    <div class="game-tech">
+                        <span>Adventure</span>
+                        <span>Wedding</span>
+                        <span>Casual</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/panda-tropical-wedding-story/YCVAFCL0i" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Mahjong At Home: Scandinavian Edition</h3>
+                        <span class="game-tag">Puzzle</span>
+                    </div>
+                    <p class="game-description">Enjoy the calming beauty of Mahjong set in a Scandinavian landscape,
+                        with relaxing puzzles and serene Nordic backdrops.</p>
+                    <div class="game-tech">
+                        <span>Puzzle & Logic</span>
+                        <span>Board Game</span>
+                        <span>IQ</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/mahjong-at-home-scandinavian-edition/JVhRZNwly"
+                        class="game-link" target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Ellie Bachelorette Party</h3>
+                        <span class="game-tag">Adventure</span>
+                    </div>
+                    <p class="game-description">Dress up Ellie in sparkle and style for her bachelorette bash! Gowns,
+                        jewels, and heels to celebrate her special day.</p>
+                    <div class="game-tech">
+                        <span>Adventure</span>
+                        <span>Fashion</span>
+                        <span>Party</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/ellie-bachelorette-party/NzI2gCZFn" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Dunk Draw</h3>
+                        <span class="game-tag">Sports</span>
+                    </div>
+                    <p class="game-description">Dunk Draw — draw lines to guide balls into hoops; quick reaction puzzle.
+                    </p>
+                    <div class="game-tech">
+                        <span>Sports & Racing</span>
+                        <span>Basketball</span>
+                        <span>Action</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/dunk-draw/r1xZyhTQ50r" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Tower Buster</h3>
+                        <span class="game-tag">Action</span>
+                    </div>
+                    <p class="game-description">The war is here. Block by block, tower after tower, prove your tank's
+                        dominance and power!</p>
+                    <div class="game-tech">
+                        <span>Action</span>
+                        <span>Shooting</span>
+                        <span>3D</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/tower-buster/8WGtd7TLH" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Sheriffs Wrath</h3>
+                        <span class="game-tag">Action</span>
+                    </div>
+                    <p class="game-description">Sheriff's Wrath — shoot-the-bad-guys shooting game (western / sheriff
+                        theme).</p>
+                    <div class="game-tech">
+                        <span>Action</span>
+                        <span>Shooting</span>
+                        <span>Featured</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/sheriffs-wrath/BJlMwGUY_yl" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Bouncy</h3>
+                        <span class="game-tag">Arcade</span>
+                    </div>
+                    <p class="game-description">Bouncy — 3D bounce/jump arcade game.</p>
+                    <div class="game-tech">
+                        <span>Arcade</span>
+                        <span>3D</span>
+                        <span>Jump</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/bouncy/H1Tz6z1Dqym" class="game-link" target="_blank">Play
+                        Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Bubble Smash</h3>
+                        <span class="game-tag">Puzzle</span>
+                    </div>
+                    <p class="game-description">Aim and Shoot to Merge and Fuse! Don't let the Bubbles touch ground, or
+                        you'll lose!</p>
+                    <div class="game-tech">
+                        <span>Puzzle & Logic</span>
+                        <span>Bubble Match</span>
+                        <span>Casual</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/bubble-smash/ryJGkhT7qAB" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Pixel Slime</h3>
+                        <span class="game-tag">Arcade</span>
+                    </div>
+                    <p class="game-description">Pixel Slime — casual jump/arcade slime game.</p>
+                    <div class="game-tech">
+                        <span>Arcade</span>
+                        <span>Pixel Art</span>
+                        <span>Action</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/pixel-slime/Sk728YXJx" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Odd One Out</h3>
+                        <span class="game-tag">Puzzle</span>
+                    </div>
+                    <p class="game-description">Odd One Out — spot & remove the odd item out in each group.</p>
+                    <div class="game-tech">
+                        <span>Puzzle & Logic</span>
+                        <span>Logic</span>
+                        <span>IQ</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/odd-one-out/Bk4ML6470x" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Nut Physics</h3>
+                        <span class="game-tag">Puzzle</span>
+                    </div>
+                    <p class="game-description">Nut Physics — logic/physics puzzle with nut-and-bolt style puzzles.</p>
+                    <div class="game-tech">
+                        <span>Physics</span>
+                        <span>Puzzle</span>
+                        <span>Logic</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/nut-physics/BJdZ-8iXULl" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Minigolf Kingdom</h3>
+                        <span class="game-tag">Sports</span>
+                    </div>
+                    <p class="game-description">Minigolf Kingdom — putt the ball into the hole within limited chances;
+                        quick minigolf levels.</p>
+                    <div class="game-tech">
+                        <span>Sports & Racing</span>
+                        <span>Golf</span>
+                        <span>Strategy</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/minigolf-kingdom/S1A0FBWuE" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Merge Mania</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Zap those numbers by pitting them against one another! Let's see how
+                        much you score in this race against time!</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>Number</span>
+                        <span>Logic</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/merge-mania/hfPOimYqY" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Little Bouncing Guys</h3>
+                        <span class="game-tag">Arcade</span>
+                    </div>
+                    <p class="game-description">Hop, jump, and bounce over obstacles and collect the purple star boxes
+                        in each level.</p>
+                    <div class="game-tech">
+                        <span>Arcade</span>
+                        <span>Jump</span>
+                        <span>Casual</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/little-bouncing-guys/Sy6RYB-u4" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Lane Battles</h3>
+                        <span class="game-tag">Sports</span>
+                    </div>
+                    <p class="game-description">Race down the lanes and defeat your opponents! Collect power-ups to gain
+                        the advantage in this arcade racing game.</p>
+                    <div class="game-tech">
+                        <span>Sports & Racing</span>
+                        <span>Racing</span>
+                        <span>Arcade</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/lane-battles/4kZgf_1z-9l" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Jimbo Jump</h3>
+                        <span class="game-tag">Adventure</span>
+                    </div>
+                    <p class="game-description">Jimbo Jump — timing/jump vertical-climb arcade game.</p>
+                    <div class="game-tech">
+                        <span>Adventure</span>
+                        <span>Jump</span>
+                        <span>Platformer</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/jimbo-jump/BkXW1a__" class="game-link" target="_blank">Play
+                        Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>High or Low</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">It's a game of luck! What do your instincts say - will it be a high
+                        card, or a low card?</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>Card Game</span>
+                        <span>Luck</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/high-or-low/H1eGU64XRg" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Hats Off</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Hats Off — flip hats and land them back on characters' heads.</p>
+                    <div class="game-tech">
+                        <span>Puzzle & Logic</span>
+                        <span>Color Match</span>
+                        <span>Strategy</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/hats-off/HyIM86VXAe" class="game-link" target="_blank">Play
+                        Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Cuby Zap</h3>
+                        <span class="game-tag">Action</span>
+                    </div>
+                    <p class="game-description">Shoot the red cubes until your lives run out. But be careful: don't
+                        shoot the blue ones!</p>
+                    <div class="game-tech">
+                        <span>Action</span>
+                        <span>Shooting</span>
+                        <span>Tower Defense</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/cuby-zap/HJeM-LsQI8x" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Crazy Pizza</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Nobody said that running a pizza shop would be easy. Can you keep all of
+                        your customers happy?</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>Cooking</span>
+                        <span>Casual</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/crazy-pizza/SyN0KSWuV" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Bottle Shoot</h3>
+                        <span class="game-tag">Action</span>
+                    </div>
+                    <p class="game-description">Shoot bottles with perfect aim and timing. The more you shoot without
+                        missing, the higher your score!</p>
+                    <div class="game-tech">
+                        <span>Action</span>
+                        <span>Shooting</span>
+                        <span>Arcade</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/bottle-shoot/B1fSpMkP51m" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Blackjack 21 Pro</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Play the classic card game Blackjack! Try to beat the dealer and win big
+                        in this strategy card game.</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>Card Game</span>
+                        <span>Casino</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/blackjack-21-pro/H13-Z8sQILx" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Astro Knot</h3>
+                        <span class="game-tag">Puzzle</span>
+                    </div>
+                    <p class="game-description">Untangle the cosmic knots in space! A relaxing puzzle game with
+                        beautiful visuals and satisfying gameplay.</p>
+                    <div class="game-tech">
+                        <span>Puzzle & Logic</span>
+                        <span>Relaxing</span>
+                        <span>Logic</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/astro-knot/rkWemI2q" class="game-link" target="_blank">Play
+                        Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Greedy Gnomes</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Greedy Gnomes — puzzle game about matching/clearing tiles.</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>IQ</span>
+                        <span>Adventure</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/greedy-gnomes/BydCYS-ON" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Ludo With Friends</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Ludo With Friends — multiplayer Ludo (create room, invite friends).</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>Board Game</span>
+                        <span>Multiplayer</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/ludo-with-friends/SkhljT2fdgb" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Block Adventure</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Block Adventure — drag and drop blocks in jungle lands with vibrant
+                        flow.</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>Puzzle</span>
+                        <span>Board</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/block-adventure/UCS62KJ8c" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Rollout</h3>
+                        <span class="game-tag">Arcade</span>
+                    </div>
+                    <p class="game-description">Roll your way through obstacles and reach the finish line! A fun and
+                        addictive rolling platformer game.</p>
+                    <div class="game-tech">
+                        <span>Arcade</span>
+                        <span>Platformer</span>
+                        <span>Casual</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/rollout/HkRMTzJDck7" class="game-link" target="_blank">Play
+                        Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Tile Master</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Match the tiles to create patterns and clear the board. A challenging
+                        logic puzzle game!</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>Puzzle</span>
+                        <span>IQ</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/tile-master/kWnZGIWIJ" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Solitaire Gold</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Solitaire Gold — classic card game with beautiful gold-themed cards and
+                        relaxing music.</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>Card Game</span>
+                        <span>Relaxing</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/solitaire-gold/rkPlk2T7qAr" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Crunching Ninjas</h3>
+                        <span class="game-tag">Arcade</span>
+                    </div>
+                    <p class="game-description">Crunching Ninjas — action/crazy-ninjas arcade game.</p>
+                    <div class="game-tech">
+                        <span>Arcade</span>
+                        <span>Action</span>
+                        <span>Casual</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/crunching-ninjas/EJnzu1fb9g" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Block Adventure Jungle Saga</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Journey through jungle lands with block-matching puzzles! Match blocks
+                        and progress through exciting levels.</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>Puzzle</span>
+                        <span>Adventure</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/block-adventure-jungle-saga/UCS62KJ8c" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Flying School</h3>
+                        <span class="game-tag">Adventure</span>
+                    </div>
+                    <p class="game-description">Help cute birds learn to fly. Drag and aim to make them fly from one
+                        nest to the other.</p>
+                    <div class="game-tech">
+                        <span>Adventure</span>
+                        <span>Logic</span>
+                        <span>Casual</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/flying-school/VJOGOyGb9l" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>BFF Retro Time Travel Fashion</h3>
+                        <span class="game-tag">Adventure</span>
+                    </div>
+                    <p class="game-description">BFFs Retro Time Travel Fashion — dress-up/time-travel fashion boutique.
+                    </p>
+                    <div class="game-tech">
+                        <span>Adventure</span>
+                        <span>Fashion</span>
+                        <span>Time Travel</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/bff-retro-time-travel-fashion/DPRFuJbmX" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Snake and Ladder</h3>
+                        <span class="game-tag">Adventure</span>
+                    </div>
+                    <p class="game-description">Play the classic board game Snake and Ladders! Roll the dice, climb the
+                        ladders, and avoid the snakes!</p>
+                    <div class="game-tech">
+                        <span>Adventure</span>
+                        <span>Board Game</span>
+                        <span>Classic</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/snake-and-ladder/rJWyhp79RS" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Kingdom Fight 2</h3>
+                        <span class="game-tag">Action</span>
+                    </div>
+                    <p class="game-description">Help the Mexican gunfighters Pedro and Juana survive the attacks of
+                        bloodthirsty zombies!</p>
+                    <div class="game-tech">
+                        <span>Action</span>
+                        <span>Shooting</span>
+                        <span>Adventure</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/kingdom-fight-2/Rt5ytrd0m" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Worms Puzzle</h3>
+                        <span class="game-tag">Puzzle</span>
+                    </div>
+                    <p class="game-description">The little worms are out on an adventure. Change shapes and colors as
+                        you puzzle through beautiful landscapes.</p>
+                    <div class="game-tech">
+                        <span>Puzzle & Logic</span>
+                        <span>Adventure</span>
+                        <span>Casual</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/worms-puzzle/rkb--Io78Ux" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Ludo Dash</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Ludo Dash — fast-paced twist on the classic board game with racing
+                        mechanics.</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>Board Game</span>
+                        <span>Racing</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/ludo-dash/SJRX12TXcRH" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Cricket Mania</h3>
+                        <span class="game-tag">Sports</span>
+                    </div>
+                    <p class="game-description">You've got 3 wickets and an audience to impress! Make as many runs as
+                        you can in this cricket game!</p>
+                    <div class="game-tech">
+                        <span>Sports & Racing</span>
+                        <span>Cricket</span>
+                        <span>Action</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/cricket-mania/PRbBrRtjr" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Triple Tile Match Master</h3>
+                        <span class="game-tag">Strategy</span>
+                    </div>
+                    <p class="game-description">Match three or more tiles to clear the board! Master the art of tile
+                        matching in this fun puzzle game!</p>
+                    <div class="game-tech">
+                        <span>Strategy</span>
+                        <span>Match-3</span>
+                        <span>Puzzle</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/triple-tile-match-master/kWnZGIWIJ" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <h3>Monster Girls Back to School</h3>
+                        <span class="game-tag">Adventure</span>
+                    </div>
+                    <p class="game-description">Monster Girls Back to School — help the monster girls get ready for back
+                        to school!</p>
+                    <div class="game-tech">
+                        <span>Adventure</span>
+                        <span>School</span>
+                        <span>Fashion</span>
+                    </div>
+                    <a href="https://www.gamezop.com/en/game/monster-girls-back-to-school/VrGGiX5dX" class="game-link"
+                        target="_blank">Play Game →</a>
+                </div>
+            </div>
+
+            <div class="games-note">
+                <p><strong>Note:</strong> More mini games and interactive experiences are being added. These showcase
+                    web-based game development using HTML5, Canvas API, and vanilla JavaScript.</p>
             </div>
         </div>
     </section>
@@ -736,24 +979,17 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-gamepad"></i>
-                    <span>GameDev Portfolio</span>
-                </div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
-                    <a href="#about">About</a>
                     <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#html-games">Mini Games</a>
                 </div>
+                <div class="footer-buttons"></div>
                 <div class="footer-social">
                     <a href="https://github.com/lzeio" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:labham7@gmail.com"><i class="fas fa-envelope"></i></a>
                     <a href="https://linkedin.com/in/labhambaheti" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/baheti_labham" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Game Developer Portfolio. All rights reserved.</p>
             </div>
         </div>
     </footer>

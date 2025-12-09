@@ -7,33 +7,6 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Theme Toggle
-const themeToggle = document.getElementById('themeToggle');
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-// Get stored theme or use system preference
-const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
-document.documentElement.setAttribute('data-theme', currentTheme);
-updateThemeIcon(currentTheme);
-
-themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
-});
-
-function updateThemeIcon(theme) {
-    const icon = themeToggle.querySelector('i');
-    if (theme === 'dark') {
-        icon.className = 'fas fa-sun';
-    } else {
-        icon.className = 'fas fa-moon';
-    }
-}
-
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
@@ -42,23 +15,115 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
 
-// Project card flip functionality
-function flipCard(button) {
-    const projectCard = button.closest('.project-card');
-    const projectFront = projectCard.querySelector('.project-front');
-    const projectBack = projectCard.querySelector('.project-back');
-
-    if (projectFront.style.display === 'none') {
-        // Show front, hide back
-        projectBack.style.display = 'none';
-        projectFront.style.display = 'block';
-        button.innerHTML = '<i class="fas fa-info-circle"></i>';
-    } else {
-        // Show back, hide front
-        projectFront.style.display = 'none';
-        projectBack.style.display = 'block';
-        button.innerHTML = '<i class="fas fa-arrow-left"></i>';
+// YouTube Video Preview Functionality
+function initYouTubePreviews() {
+    // Extract YouTube video ID from URL
+    function getYouTubeVideoId(url) {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length === 11) ? match[2] : null;
     }
+
+    // Create YouTube thumbnail background
+    function createYouTubeBackground(projectImage, videoId) {
+        const background = document.createElement('div');
+        background.className = 'youtube-background';
+        background.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/maxresdefault.jpg)`;
+        projectImage.appendChild(background);
+
+        // Create play overlay
+        const playOverlay = document.createElement('div');
+        playOverlay.className = 'play-overlay';
+        playOverlay.innerHTML = '<i class="fas fa-play"></i>';
+        projectImage.appendChild(playOverlay);
+
+        // Create preview container
+        const preview = document.createElement('div');
+        preview.className = 'youtube-preview';
+        projectImage.appendChild(preview);
+
+        // Add click event to play overlay
+        playOverlay.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Create YouTube embed iframe
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}`;
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+
+            preview.appendChild(iframe);
+            playOverlay.style.display = 'none';
+        });
+
+        // Reset on mouse leave
+        projectImage.closest('.project-card').addEventListener('mouseleave', () => {
+            preview.innerHTML = '';
+            playOverlay.style.display = 'flex';
+        });
+    }
+
+    // Find all project cards with YouTube links
+    document.querySelectorAll('.project-card').forEach(card => {
+        const youtubeLink = card.querySelector('a[href*="youtu"]');
+        if (youtubeLink) {
+            const videoId = getYouTubeVideoId(youtubeLink.href);
+            if (videoId) {
+                const projectImage = card.querySelector('.project-image');
+                createYouTubeBackground(projectImage, videoId);
+            }
+        }
+    });
+}
+
+function initGameCovers() {
+    const cards = document.querySelectorAll('.game-card');
+
+    cards.forEach(card => {
+        if (card.classList.contains('has-cover')) return;
+
+        const link = card.querySelector('.game-link');
+        const title = card.querySelector('.game-header h3')?.textContent?.trim() || 'Game cover';
+
+        if (!link) return;
+
+        const href = link.getAttribute('href') || '';
+        const codeMatch = href.match(/\/([^\/?#]+)(?:\?.*)?$/);
+        if (!codeMatch) return;
+
+        const code = codeMatch[1];
+        const coverUrl = `https://static.gamezop.com/${code}/cover.jpg`;
+        const backgroundUrl = `https://static.gamezop.com/${code}/background.jpg`;
+
+        // Preserve existing content inside a wrapper to keep stacking order clean
+        const content = document.createElement('div');
+        content.className = 'game-card-content';
+        while (card.firstChild) {
+            content.appendChild(card.firstChild);
+        }
+
+        // Add visible cover image
+        const cover = document.createElement('div');
+        cover.className = 'game-cover';
+        const img = document.createElement('img');
+        img.src = coverUrl;
+        img.alt = `${title} cover`;
+        img.loading = 'lazy';
+        cover.appendChild(img);
+        content.insertBefore(cover, content.firstChild);
+
+        // Add blurred background layer
+        const bg = document.createElement('div');
+        bg.className = 'game-cover-bg';
+        bg.style.setProperty('--game-cover-image', `url("${coverUrl}")`);
+        bg.style.setProperty('--game-cover-bg', `url("${backgroundUrl}")`);
+
+        // Rebuild card with background + content
+        card.appendChild(bg);
+        card.appendChild(content);
+        card.classList.add('has-cover');
+    });
 }
 
 // Smooth scrolling for navigation links
@@ -159,8 +224,11 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typing effect on page load
+// Initialize interactive elements on DOM ready
 document.addEventListener('DOMContentLoaded', function () {
+    initYouTubePreviews();
+    initGameCovers();
+
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
         const originalText = heroTitle.textContent;
