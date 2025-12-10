@@ -80,72 +80,86 @@ function initYouTubePreviews() {
 }
 
 function initGameCovers() {
-    const cards = document.querySelectorAll('.game-card');
+    try {
+        const cards = document.querySelectorAll('.game-card');
+        if (!cards || cards.length === 0) return;
 
-    cards.forEach(card => {
-        if (card.classList.contains('has-cover')) return;
+        cards.forEach(card => {
+            try {
+                if (card.classList.contains('has-cover')) return;
 
-        const link = card.querySelector('.game-link');
-        const title = card.querySelector('.game-header h3')?.textContent?.trim() || 'Game';
+                const link = card.querySelector('.game-link');
+                const titleEl = card.querySelector('.game-header h3');
+                const title = (titleEl && titleEl.textContent) ? titleEl.textContent.trim() : 'Game';
 
-        if (!link) return;
+                if (!link) return;
 
-        const href = link.getAttribute('href') || '';
-        const codeMatch = href.match(/\/([^\/?#]+)(?:\?.*)?$/);
-        if (!codeMatch) return;
+                const href = link.getAttribute('href') || '';
+                const codeMatch = href.match(/\/([^\/?#]+)(?:\?.*)?$/);
+                if (!codeMatch) return;
 
-        const code = codeMatch[1];
-        const coverUrl = `https://static.gamezop.com/${code}/cover.jpg`;
+                const code = codeMatch[1];
+                const coverUrl = `https://static.gamezop.com/${code}/cover.jpg`;
 
-        // Preserve existing content inside a wrapper to keep stacking order clean
-        const content = document.createElement('div');
-        content.className = 'game-card-content';
-        while (card.firstChild) {
-            content.appendChild(card.firstChild);
-        }
+                // Preserve existing content inside a wrapper to keep stacking order clean
+                const content = document.createElement('div');
+                content.className = 'game-card-content';
 
-        // Create a gradient background based on title hash for fallback
-        const hash = title.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-        const colors = [
-            'linear-gradient(135deg, rgba(0, 191, 255, 0.2), rgba(0, 130, 255, 0.15))',
-            'linear-gradient(135deg, rgba(255, 94, 188, 0.2), rgba(200, 100, 255, 0.15))',
-            'linear-gradient(135deg, rgba(0, 255, 150, 0.2), rgba(0, 200, 100, 0.15))',
-            'linear-gradient(135deg, rgba(255, 200, 0, 0.2), rgba(255, 140, 0, 0.15))',
-            'linear-gradient(135deg, rgba(100, 200, 255, 0.2), rgba(50, 150, 255, 0.15))'
-        ];
+                // Move children safely
+                const children = Array.from(card.childNodes);
+                children.forEach(child => {
+                    content.appendChild(child);
+                });
 
-        const fallbackGradient = colors[Math.abs(hash) % colors.length];
+                // Create a gradient background based on title hash for fallback
+                const hash = title.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+                const colors = [
+                    'linear-gradient(135deg, rgba(0, 191, 255, 0.2), rgba(0, 130, 255, 0.15))',
+                    'linear-gradient(135deg, rgba(255, 94, 188, 0.2), rgba(200, 100, 255, 0.15))',
+                    'linear-gradient(135deg, rgba(0, 255, 150, 0.2), rgba(0, 200, 100, 0.15))',
+                    'linear-gradient(135deg, rgba(255, 200, 0, 0.2), rgba(255, 140, 0, 0.15))',
+                    'linear-gradient(135deg, rgba(100, 200, 255, 0.2), rgba(50, 150, 255, 0.15))'
+                ];
 
-        // Add cover with image that falls back to gradient
-        const cover = document.createElement('div');
-        cover.className = 'game-cover game-cover-placeholder';
-        cover.style.background = fallbackGradient;
+                const fallbackGradient = colors[Math.abs(hash) % colors.length];
 
-        // Try to load actual image
-        const img = document.createElement('img');
-        img.src = coverUrl;
-        img.alt = `${title} cover`;
-        img.loading = 'lazy';
-        img.className = 'game-cover-img';
+                // Add cover with image that falls back to gradient
+                const cover = document.createElement('div');
+                cover.className = 'game-cover game-cover-placeholder';
+                cover.style.background = fallbackGradient;
 
-        // If image loads successfully, remove gradient
-        img.onload = function () {
-            cover.style.background = 'none';
-        };
+                // Try to load actual image
+                const img = document.createElement('img');
+                img.src = coverUrl;
+                img.alt = title + ' cover';
+                img.loading = 'lazy';
+                img.className = 'game-cover-img';
 
-        // If image fails (ad blocker, CORS, etc), keep gradient
-        img.onerror = function () {
-            img.style.display = 'none';
-            cover.style.background = fallbackGradient;
-        };
+                // If image loads successfully, remove gradient
+                img.onload = function () {
+                    cover.style.background = 'none';
+                };
 
-        cover.appendChild(img);
-        content.insertBefore(cover, content.firstChild);
+                // If image fails (ad blocker, CORS, etc), keep gradient
+                img.onerror = function () {
+                    img.style.display = 'none';
+                    cover.style.background = fallbackGradient;
+                };
 
-        // Rebuild card with content
-        card.appendChild(content);
-        card.classList.add('has-cover');
-    });
+                cover.appendChild(img);
+                content.insertBefore(cover, content.firstChild);
+
+                // Rebuild card with content
+                card.appendChild(content);
+                card.classList.add('has-cover');
+            } catch (cardError) {
+                console.error('Error processing individual game card:', cardError);
+                // Don't break the loop, continue with other cards
+            }
+        });
+    } catch (error) {
+        console.error('initGameCovers failed:', error);
+    }
 }
 
 // Smooth scrolling for navigation links
