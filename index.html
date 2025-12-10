@@ -8,19 +8,31 @@
     <meta name="description"
         content="Labham Baheti - Game Developer Portfolio showcasing innovative games and interactive experiences">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css?v=1.1.0">
+    <link rel="stylesheet" href="styles.css?v=3.1.0">
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
 </head>
 
 <body>
+    <!-- Loading Screen with Facts -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <h2 class="loading-title">Labham's Portfolio</h2>
+            <p class="loading-fact" id="loading-fact">Loading amazing games...</p>
+            <div class="loading-progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <p class="loading-percentage" id="loading-percentage">0%</p>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-            </div>
+            <div class="nav-logo">Labham</div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -999,7 +1011,7 @@
         </div>
     </footer>
 
-    <script src="script.js?v=1.1.0"></script>
+    <script src="script.js?v=3.1.0"></script>
 </body>
 
 </html>

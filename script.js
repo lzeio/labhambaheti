@@ -1,3 +1,83 @@
+// Loading Screen with Game Dev Facts
+const gameDevFacts = [
+    "If 'it just works' in the editor, it will DEFINITELY break in production.",
+    "Unity devs and Unreal devs can't be in the same room without arguing.",
+    "The phrase 'it's probably a floating point error' solves 40% of bugs.",
+    "Game developers have cried over broken physics more than any other profession.",
+    "Yes, turning it off and on again is actually a valid game dev strategy.",
+    "Optimization means 'stop wasting memory on things the player never sees'.",
+    "Every game jam has at least one person saying 'what if we make it multiplayer?'",
+    "A single missing semicolon has destroyed more dreams than bad ideas.",
+    "Shader code looks like someone spilled alphabet soup on a keyboard.",
+    "AI pathfinding bugs create the best unintentional comedy moments.",
+    "Game balance is either 'way too easy' or 'literally impossible'—no in-between.",
+    "3D model clipping through walls = free new area to explore? 🤔",
+    "Hotfixes at 2 AM while surviving on pure caffeine is peak game dev.",
+    "Someone, somewhere, is using your game to test their potato PC.",
+    "If it ships with bugs, they're now 'features' (probably)."
+];
+
+function showLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const progressFill = document.getElementById('progress-fill');
+    const percentageText = document.getElementById('loading-percentage');
+    const factText = document.getElementById('loading-fact');
+    
+    if (!loadingScreen) return;
+
+    let currentProgress = 0;
+    let factIndex = 0;
+    
+    // Change fact every 800ms
+    const factInterval = setInterval(() => {
+        factIndex = Math.floor(Math.random() * gameDevFacts.length);
+        if (factText) {
+            factText.style.opacity = '0.5';
+            setTimeout(() => {
+                factText.textContent = gameDevFacts[factIndex];
+                factText.style.opacity = '1';
+            }, 150);
+        }
+    }, 1200);
+
+    // Progress bar animation
+    const progressInterval = setInterval(() => {
+        currentProgress += Math.random() * 25;
+        if (currentProgress > 90) currentProgress = 90;
+        
+        if (progressFill) {
+            progressFill.style.width = currentProgress + '%';
+        }
+        if (percentageText) {
+            percentageText.textContent = Math.floor(currentProgress) + '%';
+        }
+    }, 400);
+
+    // When page loads, complete the bar and fade out
+    window.addEventListener('load', () => {
+        clearInterval(factInterval);
+        clearInterval(progressInterval);
+        
+        if (progressFill) progressFill.style.width = '100%';
+        if (percentageText) percentageText.textContent = '100%';
+        
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+        }, 600);
+    });
+}
+
+// Start loading screen
+if (document.readyState === 'loading') {
+    showLoadingScreen();
+} else {
+    // Page already loaded (shouldn't happen, but just in case)
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        loadingScreen.classList.add('hidden');
+    }
+}
+
 // Mobile Navigation
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -327,119 +407,7 @@ if ('ontouchstart' in window) {
     cursor.style.display = 'none';
 }
 
-// Preloader
-const preloader = document.createElement('div');
-preloader.className = 'preloader';
-preloader.innerHTML = `
-    <div class="loader">
-        <div class="loader-inner">
-            <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-            </div>
-        </div>
-    </div>
-`;
 
-const preloaderStyles = `
-    <style>
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #0a0a0a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10000;
-            transition: opacity 0.5s ease-out;
-        }
-        
-        .loader {
-            width: 60px;
-            height: 60px;
-            position: relative;
-        }
-        
-        .loader-inner {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-        
-        .loader-line-wrap {
-            animation: spin 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-            box-sizing: border-box;
-            height: 50px;
-            left: 50%;
-            overflow: hidden;
-            position: absolute;
-            top: 50%;
-            transform-origin: 50% 50%;
-            width: 50px;
-            z-index: 1;
-        }
-        
-        .loader-line {
-            border: 2px solid transparent;
-            border-radius: 100%;
-            box-sizing: border-box;
-            height: 100%;
-            left: 0;
-            margin: 0 auto;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 100%;
-        }
-        
-        .loader-line-wrap:nth-child(1) { animation-delay: -50ms; }
-        .loader-line-wrap:nth-child(2) { animation-delay: -100ms; }
-        .loader-line-wrap:nth-child(3) { animation-delay: -150ms; }
-        .loader-line-wrap:nth-child(4) { animation-delay: -200ms; }
-        .loader-line-wrap:nth-child(5) { animation-delay: -250ms; }
-        
-        .loader-line-wrap:nth-child(1) .loader-line { border-color: #00d4ff; }
-        .loader-line-wrap:nth-child(2) .loader-line { border-color: #ff006e; }
-        .loader-line-wrap:nth-child(3) .loader-line { border-color: #8338ec; }
-        .loader-line-wrap:nth-child(4) .loader-line { border-color: #00d4ff; }
-        .loader-line-wrap:nth-child(5) .loader-line { border-color: #ff006e; }
-        
-        @keyframes spin {
-            0%, 15% { transform: translate(-50%, -50%) rotate(0); }
-            25%, 35% { transform: translate(-50%, -50%) rotate(90deg); }
-            45%, 55% { transform: translate(-50%, -50%) rotate(180deg); }
-            65%, 75% { transform: translate(-50%, -50%) rotate(270deg); }
-            85%, 100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-    </style>
-`;
-
-document.head.insertAdjacentHTML('beforeend', preloaderStyles);
-document.body.appendChild(preloader);
-
-// Hide preloader after page load
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-            preloader.remove();
-        }, 500);
-    }, 1000);
-});
 
 // Add scroll progress indicator
 const progressBar = document.createElement('div');
