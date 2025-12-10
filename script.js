@@ -2,18 +2,20 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
-});
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
 
 // YouTube Video Preview Functionality
 function initYouTubePreviews() {
@@ -246,14 +248,27 @@ function typeWriter(element, text, speed = 100) {
 
 // Initialize interactive elements on DOM ready
 document.addEventListener('DOMContentLoaded', function () {
-    initYouTubePreviews();
-    initGameCovers();
+    try {
+        initYouTubePreviews();
+    } catch (e) {
+        console.error('YouTube previews failed:', e);
+    }
+
+    try {
+        initGameCovers();
+    } catch (e) {
+        console.error('Game covers failed:', e);
+    }
 
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
         const originalText = heroTitle.textContent;
         setTimeout(() => {
-            typeWriter(heroTitle, originalText, 50);
+            try {
+                typeWriter(heroTitle, originalText, 50);
+            } catch (e) {
+                console.error('TypeWriter failed:', e);
+            }
         }, 500);
     }
 });
