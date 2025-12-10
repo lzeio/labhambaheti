@@ -84,17 +84,9 @@ function initGameCovers() {
         if (card.classList.contains('has-cover')) return;
 
         const link = card.querySelector('.game-link');
-        const title = card.querySelector('.game-header h3')?.textContent?.trim() || 'Game cover';
+        const title = card.querySelector('.game-header h3')?.textContent?.trim() || 'Game';
 
         if (!link) return;
-
-        const href = link.getAttribute('href') || '';
-        const codeMatch = href.match(/\/([^\/?#]+)(?:\?.*)?$/);
-        if (!codeMatch) return;
-
-        const code = codeMatch[1];
-        const coverUrl = `https://static.gamezop.com/${code}/cover.jpg`;
-        const backgroundUrl = `https://static.gamezop.com/${code}/background.jpg`;
 
         // Preserve existing content inside a wrapper to keep stacking order clean
         const content = document.createElement('div');
@@ -103,24 +95,31 @@ function initGameCovers() {
             content.appendChild(card.firstChild);
         }
 
-        // Add visible cover image
+        // Add visible cover placeholder (no external images)
         const cover = document.createElement('div');
-        cover.className = 'game-cover';
-        const img = document.createElement('img');
-        img.src = coverUrl;
-        img.alt = `${title} cover`;
-        img.loading = 'lazy';
-        cover.appendChild(img);
+        cover.className = 'game-cover game-cover-placeholder';
+
+        // Create a gradient background based on title hash for visual variety
+        const hash = title.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+        const colors = [
+            'linear-gradient(135deg, rgba(0, 191, 255, 0.2), rgba(0, 130, 255, 0.15))',
+            'linear-gradient(135deg, rgba(255, 94, 188, 0.2), rgba(200, 100, 255, 0.15))',
+            'linear-gradient(135deg, rgba(0, 255, 150, 0.2), rgba(0, 200, 100, 0.15))',
+            'linear-gradient(135deg, rgba(255, 200, 0, 0.2), rgba(255, 140, 0, 0.15))',
+            'linear-gradient(135deg, rgba(100, 200, 255, 0.2), rgba(50, 150, 255, 0.15))'
+        ];
+
+        const gradient = colors[Math.abs(hash) % colors.length];
+        cover.style.background = gradient;
+
+        const icon = document.createElement('div');
+        icon.className = 'game-cover-icon';
+        icon.innerHTML = '🎮';
+        cover.appendChild(icon);
+
         content.insertBefore(cover, content.firstChild);
 
-        // Add blurred background layer
-        const bg = document.createElement('div');
-        bg.className = 'game-cover-bg';
-        bg.style.setProperty('--game-cover-image', `url("${coverUrl}")`);
-        bg.style.setProperty('--game-cover-bg', `url("${backgroundUrl}")`);
-
-        // Rebuild card with background + content
-        card.appendChild(bg);
+        // Rebuild card with content (no background layer needed)
         card.appendChild(content);
         card.classList.add('has-cover');
     });
