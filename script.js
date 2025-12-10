@@ -22,12 +22,12 @@ function showLoadingScreen() {
     const progressFill = document.getElementById('progress-fill');
     const percentageText = document.getElementById('loading-percentage');
     const factText = document.getElementById('loading-fact');
-    
+
     if (!loadingScreen) return;
 
     let currentProgress = 0;
     let factIndex = 0;
-    
+
     // Change fact every 800ms
     const factInterval = setInterval(() => {
         factIndex = Math.floor(Math.random() * gameDevFacts.length);
@@ -44,7 +44,7 @@ function showLoadingScreen() {
     const progressInterval = setInterval(() => {
         currentProgress += Math.random() * 25;
         if (currentProgress > 90) currentProgress = 90;
-        
+
         if (progressFill) {
             progressFill.style.width = currentProgress + '%';
         }
@@ -57,10 +57,10 @@ function showLoadingScreen() {
     window.addEventListener('load', () => {
         clearInterval(factInterval);
         clearInterval(progressInterval);
-        
+
         if (progressFill) progressFill.style.width = '100%';
         if (percentageText) percentageText.textContent = '100%';
-        
+
         setTimeout(() => {
             loadingScreen.classList.add('hidden');
         }, 600);
