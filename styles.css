@@ -234,6 +234,34 @@ html[data-theme="dark"] body {
     gap: 2rem;
 }
 
+.nav-social {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.nav-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 191, 255, 0.1);
+    border: 1.5px solid rgba(0, 191, 255, 0.3);
+    color: var(--text-primary);
+    transition: var(--transition);
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.nav-social a:hover {
+    background: rgba(0, 191, 255, 0.25);
+    border-color: rgba(0, 191, 255, 0.6);
+    transform: scale(1.15);
+    box-shadow: 0 6px 16px rgba(0, 191, 255, 0.25);
+}
+
 .theme-toggle {
     background: none;
     border: 2px solid var(--primary-color);
@@ -635,13 +663,7 @@ html[data-theme="dark"] body {
 }
 
 .game-cover-icon {
-    font-size: 3.5rem;
-    opacity: 0.4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    position: relative;
+    display: none;
 }
 
 .game-cover img {

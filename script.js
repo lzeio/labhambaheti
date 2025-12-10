@@ -112,11 +112,6 @@ function initGameCovers() {
         const gradient = colors[Math.abs(hash) % colors.length];
         cover.style.background = gradient;
 
-        const icon = document.createElement('div');
-        icon.className = 'game-cover-icon';
-        icon.innerHTML = '🎮';
-        cover.appendChild(icon);
-
         content.insertBefore(cover, content.firstChild);
 
         // Rebuild card with content (no background layer needed)
