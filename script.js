@@ -88,6 +88,13 @@ function initGameCovers() {
 
         if (!link) return;
 
+        const href = link.getAttribute('href') || '';
+        const codeMatch = href.match(/\/([^\/?#]+)(?:\?.*)?$/);
+        if (!codeMatch) return;
+
+        const code = codeMatch[1];
+        const coverUrl = `https://static.gamezop.com/${code}/cover.jpg`;
+
         // Preserve existing content inside a wrapper to keep stacking order clean
         const content = document.createElement('div');
         content.className = 'game-card-content';
@@ -95,11 +102,7 @@ function initGameCovers() {
             content.appendChild(card.firstChild);
         }
 
-        // Add visible cover placeholder (no external images)
-        const cover = document.createElement('div');
-        cover.className = 'game-cover game-cover-placeholder';
-
-        // Create a gradient background based on title hash for visual variety
+        // Create a gradient background based on title hash for fallback
         const hash = title.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
         const colors = [
             'linear-gradient(135deg, rgba(0, 191, 255, 0.2), rgba(0, 130, 255, 0.15))',
@@ -109,12 +112,35 @@ function initGameCovers() {
             'linear-gradient(135deg, rgba(100, 200, 255, 0.2), rgba(50, 150, 255, 0.15))'
         ];
 
-        const gradient = colors[Math.abs(hash) % colors.length];
-        cover.style.background = gradient;
+        const fallbackGradient = colors[Math.abs(hash) % colors.length];
 
+        // Add cover with image that falls back to gradient
+        const cover = document.createElement('div');
+        cover.className = 'game-cover game-cover-placeholder';
+        cover.style.background = fallbackGradient;
+
+        // Try to load actual image
+        const img = document.createElement('img');
+        img.src = coverUrl;
+        img.alt = `${title} cover`;
+        img.loading = 'lazy';
+        img.className = 'game-cover-img';
+
+        // If image loads successfully, remove gradient
+        img.onload = function () {
+            cover.style.background = 'none';
+        };
+
+        // If image fails (ad blocker, CORS, etc), keep gradient
+        img.onerror = function () {
+            img.style.display = 'none';
+            cover.style.background = fallbackGradient;
+        };
+
+        cover.appendChild(img);
         content.insertBefore(cover, content.firstChild);
 
-        // Rebuild card with content (no background layer needed)
+        // Rebuild card with content
         card.appendChild(content);
         card.classList.add('has-cover');
     });
